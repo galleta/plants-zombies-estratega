@@ -1,0 +1,1044 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/*
+ * elegirPlantitas.java
+ *
+ * Created on 18-may-2011, 17:19:13
+ */
+
+package plantasvszombies;
+
+import java.awt.Graphics;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.ListIterator;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+
+/**
+ *
+ * @author francis
+ */
+public class elegirPlantitas extends javax.swing.JFrame
+{
+    private int cantidadPlantas = 0, numeroPlantasElegidas = 0;
+    private ArrayList plantas = new ArrayList();
+    private ImageIcon girasol = new ImageIcon("imagenes/Plantas/Girasol.jpg");
+    private ImageIcon guisantes1 = new ImageIcon("imagenes/Plantas/DisparaGuisantes.jpg");
+    private ImageIcon repetidora = new ImageIcon("imagenes/Plantas/Repetidora.jpg");
+    private ImageIcon guisantes2 = new ImageIcon("imagenes/Plantas/DisparaGuisantes2.jpg");
+    private ImageIcon guisantes3 = new ImageIcon("imagenes/Plantas/DisparaGuisantesTriple.jpg");
+    private ImageIcon hielaGuisantes = new ImageIcon("imagenes/Plantas/HielaGuisantes.jpg");
+    private ImageIcon plantaCarnivora = new ImageIcon("imagenes/Plantas/PlantaCarnivora.jpg");
+    private ImageIcon cactus = new ImageIcon("imagenes/Plantas/Cactus.jpg");
+    private ImageIcon patatamina = new ImageIcon("imagenes/Plantas/Patatamina.jpg");
+    private ImageIcon estrella = new ImageIcon("imagenes/Plantas/Estrella.jpg");
+    private ImageIcon nuez = new ImageIcon("imagenes/Plantas/Nuez.jpg");
+    private ImageIcon nuezGorda = new ImageIcon("imagenes/Plantas/NuezGorda.jpg");
+    private ImageIcon coliflor = new ImageIcon("imagenes/Plantas/Coliflor.png");
+    private ImageIcon mazorca = new ImageIcon("imagenes/Plantas/Mazorca.png");
+    private ImageIcon melon = new ImageIcon("imagenes/Plantas/Melon.png");
+
+    @Override
+    public void paint(Graphics g)
+    {
+        super.paintComponents(g);
+        g = panelGirasol.getGraphics();
+        g.drawImage(girasol.getImage(), 0, 0, girasol.getIconWidth(), girasol.getIconHeight(), this);
+        g = panelDisparaGuisantes.getGraphics();
+        g.drawImage(guisantes1.getImage(), 0, 0, guisantes1.getIconWidth(), guisantes1.getIconHeight(), this);
+        g = panelRepetidora.getGraphics();
+        g.drawImage(repetidora.getImage(), 0, 0, repetidora.getIconWidth(), repetidora.getIconHeight(), this);
+        g = panelDisparaGuisantes2.getGraphics();
+        g.drawImage(guisantes2.getImage(), 0, 0, guisantes2.getIconWidth(), guisantes2.getIconHeight(), this);
+        g = panelDisparaGuisantes3.getGraphics();
+        g.drawImage(guisantes3.getImage(), 0, 0, guisantes3.getIconWidth(), guisantes3.getIconHeight(), this);
+        g = panelHielaGuisantes.getGraphics();
+        g.drawImage(hielaGuisantes.getImage(), 0, 0, hielaGuisantes.getIconWidth(), hielaGuisantes.getIconHeight(), this);
+        g = panelPlantaCarnivora.getGraphics();
+        g.drawImage(plantaCarnivora.getImage(), 0, 0, plantaCarnivora.getIconWidth(), plantaCarnivora.getIconHeight(), this);
+        g = panelCactus.getGraphics();
+        g.drawImage(cactus.getImage(), 0, 0, cactus.getIconWidth(), cactus.getIconHeight(), this);
+        g = panelPatatamina.getGraphics();
+        g.drawImage(patatamina.getImage(), 0, 0, patatamina.getIconWidth(), patatamina.getIconHeight(), this);
+        g = panelEstrella.getGraphics();
+        g.drawImage(estrella.getImage(), 0, 0, estrella.getIconWidth(), estrella.getIconHeight(), this);
+        g = panelNuez.getGraphics();
+        g.drawImage(nuez.getImage(), 0, 0, nuez.getIconWidth(), nuez.getIconHeight(), this);
+        g = panelNuezGorda.getGraphics();
+        g.drawImage(nuezGorda.getImage(), 0, 0, nuezGorda.getIconWidth(), nuezGorda.getIconHeight(), this);
+        g = panelColiflor.getGraphics();
+        g.drawImage(coliflor.getImage(), 0, 0, coliflor.getIconWidth(), coliflor.getIconHeight(), this);
+        g = panelMazorca.getGraphics();
+        g.drawImage(mazorca.getImage(), 0, 0, mazorca.getIconWidth(), mazorca.getIconHeight(), this);
+        g = panelMelon.getGraphics();
+        g.drawImage(melon.getImage(), 0, 0, melon.getIconWidth(), melon.getIconHeight(), this);
+
+    }
+    /** Creates new form elegirPlantitas */
+    public elegirPlantitas() {
+        initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }
+
+    public elegirPlantitas(ArrayList plants) throws LineUnavailableException, IOException, UnsupportedAudioFileException {
+        plantas = plants;
+        initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }
+
+    /** This method is called from within the constructor to
+     * initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is
+     * always regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        panelGirasol = new javax.swing.JPanel();
+        panelDisparaGuisantes = new javax.swing.JPanel();
+        panelRepetidora = new javax.swing.JPanel();
+        panelDisparaGuisantes2 = new javax.swing.JPanel();
+        panelDisparaGuisantes3 = new javax.swing.JPanel();
+        panelHielaGuisantes = new javax.swing.JPanel();
+        panelPlantaCarnivora = new javax.swing.JPanel();
+        panelCactus = new javax.swing.JPanel();
+        panelPatatamina = new javax.swing.JPanel();
+        panelEstrella = new javax.swing.JPanel();
+        panelNuez = new javax.swing.JPanel();
+        panelNuezGorda = new javax.swing.JPanel();
+        panelColiflor = new javax.swing.JPanel();
+        panelMazorca = new javax.swing.JPanel();
+        panelMelon = new javax.swing.JPanel();
+        textoNumeroPlantas = new javax.swing.JTextField();
+        botonEmpezar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        scrollAreaPlantasElegidas = new javax.swing.JScrollPane();
+        areaPlantasElegidas = new javax.swing.JTextArea();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
+
+        panelGirasol.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelGirasol.setToolTipText("");
+        panelGirasol.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        panelGirasol.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        panelGirasol.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        panelGirasol.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelGirasolMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelGirasolLayout = new javax.swing.GroupLayout(panelGirasol);
+        panelGirasol.setLayout(panelGirasolLayout);
+        panelGirasolLayout.setHorizontalGroup(
+            panelGirasolLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 89, Short.MAX_VALUE)
+        );
+        panelGirasolLayout.setVerticalGroup(
+            panelGirasolLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 98, Short.MAX_VALUE)
+        );
+
+        panelDisparaGuisantes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelDisparaGuisantes.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        panelDisparaGuisantes.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        panelDisparaGuisantes.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        panelDisparaGuisantes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelDisparaGuisantesMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelDisparaGuisantesLayout = new javax.swing.GroupLayout(panelDisparaGuisantes);
+        panelDisparaGuisantes.setLayout(panelDisparaGuisantesLayout);
+        panelDisparaGuisantesLayout.setHorizontalGroup(
+            panelDisparaGuisantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 86, Short.MAX_VALUE)
+        );
+        panelDisparaGuisantesLayout.setVerticalGroup(
+            panelDisparaGuisantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 98, Short.MAX_VALUE)
+        );
+
+        panelRepetidora.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelRepetidora.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        panelRepetidora.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        panelRepetidora.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        panelRepetidora.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelRepetidoraMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelRepetidoraLayout = new javax.swing.GroupLayout(panelRepetidora);
+        panelRepetidora.setLayout(panelRepetidoraLayout);
+        panelRepetidoraLayout.setHorizontalGroup(
+            panelRepetidoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 102, Short.MAX_VALUE)
+        );
+        panelRepetidoraLayout.setVerticalGroup(
+            panelRepetidoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 98, Short.MAX_VALUE)
+        );
+
+        panelDisparaGuisantes2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelDisparaGuisantes2.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        panelDisparaGuisantes2.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        panelDisparaGuisantes2.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        panelDisparaGuisantes2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelDisparaGuisantes2MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelDisparaGuisantes2Layout = new javax.swing.GroupLayout(panelDisparaGuisantes2);
+        panelDisparaGuisantes2.setLayout(panelDisparaGuisantes2Layout);
+        panelDisparaGuisantes2Layout.setHorizontalGroup(
+            panelDisparaGuisantes2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 112, Short.MAX_VALUE)
+        );
+        panelDisparaGuisantes2Layout.setVerticalGroup(
+            panelDisparaGuisantes2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 98, Short.MAX_VALUE)
+        );
+
+        panelDisparaGuisantes3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelDisparaGuisantes3.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        panelDisparaGuisantes3.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        panelDisparaGuisantes3.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        panelDisparaGuisantes3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelDisparaGuisantes3MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelDisparaGuisantes3Layout = new javax.swing.GroupLayout(panelDisparaGuisantes3);
+        panelDisparaGuisantes3.setLayout(panelDisparaGuisantes3Layout);
+        panelDisparaGuisantes3Layout.setHorizontalGroup(
+            panelDisparaGuisantes3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 87, Short.MAX_VALUE)
+        );
+        panelDisparaGuisantes3Layout.setVerticalGroup(
+            panelDisparaGuisantes3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 98, Short.MAX_VALUE)
+        );
+
+        panelHielaGuisantes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelHielaGuisantes.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        panelHielaGuisantes.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        panelHielaGuisantes.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        panelHielaGuisantes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelHielaGuisantesMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelHielaGuisantesLayout = new javax.swing.GroupLayout(panelHielaGuisantes);
+        panelHielaGuisantes.setLayout(panelHielaGuisantesLayout);
+        panelHielaGuisantesLayout.setHorizontalGroup(
+            panelHielaGuisantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 99, Short.MAX_VALUE)
+        );
+        panelHielaGuisantesLayout.setVerticalGroup(
+            panelHielaGuisantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 98, Short.MAX_VALUE)
+        );
+
+        panelPlantaCarnivora.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelPlantaCarnivora.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        panelPlantaCarnivora.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        panelPlantaCarnivora.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        panelPlantaCarnivora.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelPlantaCarnivoraMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelPlantaCarnivoraLayout = new javax.swing.GroupLayout(panelPlantaCarnivora);
+        panelPlantaCarnivora.setLayout(panelPlantaCarnivoraLayout);
+        panelPlantaCarnivoraLayout.setHorizontalGroup(
+            panelPlantaCarnivoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 90, Short.MAX_VALUE)
+        );
+        panelPlantaCarnivoraLayout.setVerticalGroup(
+            panelPlantaCarnivoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 98, Short.MAX_VALUE)
+        );
+
+        panelCactus.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelCactus.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        panelCactus.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        panelCactus.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        panelCactus.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelCactusMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelCactusLayout = new javax.swing.GroupLayout(panelCactus);
+        panelCactus.setLayout(panelCactusLayout);
+        panelCactusLayout.setHorizontalGroup(
+            panelCactusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 102, Short.MAX_VALUE)
+        );
+        panelCactusLayout.setVerticalGroup(
+            panelCactusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 98, Short.MAX_VALUE)
+        );
+
+        panelPatatamina.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelPatatamina.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        panelPatatamina.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        panelPatatamina.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        panelPatatamina.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelPatataminaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelPatataminaLayout = new javax.swing.GroupLayout(panelPatatamina);
+        panelPatatamina.setLayout(panelPatataminaLayout);
+        panelPatataminaLayout.setHorizontalGroup(
+            panelPatataminaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 129, Short.MAX_VALUE)
+        );
+        panelPatataminaLayout.setVerticalGroup(
+            panelPatataminaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 98, Short.MAX_VALUE)
+        );
+
+        panelEstrella.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelEstrella.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        panelEstrella.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        panelEstrella.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        panelEstrella.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelEstrellaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelEstrellaLayout = new javax.swing.GroupLayout(panelEstrella);
+        panelEstrella.setLayout(panelEstrellaLayout);
+        panelEstrellaLayout.setHorizontalGroup(
+            panelEstrellaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 111, Short.MAX_VALUE)
+        );
+        panelEstrellaLayout.setVerticalGroup(
+            panelEstrellaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 98, Short.MAX_VALUE)
+        );
+
+        panelNuez.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelNuez.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        panelNuez.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        panelNuez.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        panelNuez.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelNuezMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelNuezLayout = new javax.swing.GroupLayout(panelNuez);
+        panelNuez.setLayout(panelNuezLayout);
+        panelNuezLayout.setHorizontalGroup(
+            panelNuezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 84, Short.MAX_VALUE)
+        );
+        panelNuezLayout.setVerticalGroup(
+            panelNuezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 98, Short.MAX_VALUE)
+        );
+
+        panelNuezGorda.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelNuezGorda.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        panelNuezGorda.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        panelNuezGorda.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        panelNuezGorda.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelNuezGordaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelNuezGordaLayout = new javax.swing.GroupLayout(panelNuezGorda);
+        panelNuezGorda.setLayout(panelNuezGordaLayout);
+        panelNuezGordaLayout.setHorizontalGroup(
+            panelNuezGordaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 81, Short.MAX_VALUE)
+        );
+        panelNuezGordaLayout.setVerticalGroup(
+            panelNuezGordaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 98, Short.MAX_VALUE)
+        );
+
+        panelColiflor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelColiflor.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        panelColiflor.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        panelColiflor.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        panelColiflor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelColiflorMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelColiflorLayout = new javax.swing.GroupLayout(panelColiflor);
+        panelColiflor.setLayout(panelColiflorLayout);
+        panelColiflorLayout.setHorizontalGroup(
+            panelColiflorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 94, Short.MAX_VALUE)
+        );
+        panelColiflorLayout.setVerticalGroup(
+            panelColiflorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 94, Short.MAX_VALUE)
+        );
+
+        panelMazorca.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMazorca.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        panelMazorca.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        panelMazorca.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        panelMazorca.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelMazorcaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelMazorcaLayout = new javax.swing.GroupLayout(panelMazorca);
+        panelMazorca.setLayout(panelMazorcaLayout);
+        panelMazorcaLayout.setHorizontalGroup(
+            panelMazorcaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 94, Short.MAX_VALUE)
+        );
+        panelMazorcaLayout.setVerticalGroup(
+            panelMazorcaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 94, Short.MAX_VALUE)
+        );
+
+        panelMelon.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMelon.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        panelMelon.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        panelMelon.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        panelMelon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelMelonMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelMelonLayout = new javax.swing.GroupLayout(panelMelon);
+        panelMelon.setLayout(panelMelonLayout);
+        panelMelonLayout.setHorizontalGroup(
+            panelMelonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 94, Short.MAX_VALUE)
+        );
+        panelMelonLayout.setVerticalGroup(
+            panelMelonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 94, Short.MAX_VALUE)
+        );
+
+        textoNumeroPlantas.setText("0");
+        textoNumeroPlantas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textoNumeroPlantasActionPerformed(evt);
+            }
+        });
+
+        botonEmpezar.setText("Empezar a elegir");
+        botonEmpezar.setActionCommand("Empezar a elegri");
+        botonEmpezar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEmpezarActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Número de plantas de las que dispones:");
+
+        areaPlantasElegidas.setColumns(20);
+        areaPlantasElegidas.setFont(new java.awt.Font("Ubuntu", 1, 15));
+        areaPlantasElegidas.setRows(5);
+        areaPlantasElegidas.setText("Plantas elegidas:");
+        areaPlantasElegidas.setEnabled(false);
+        scrollAreaPlantasElegidas.setViewportView(areaPlantasElegidas);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(panelColiflor, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelMazorca, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelMelon, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(botonEmpezar))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(58, 58, 58)
+                                .addComponent(textoNumeroPlantas, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(panelGirasol, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panelDisparaGuisantes, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panelRepetidora, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panelDisparaGuisantes2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(panelPatatamina, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panelEstrella, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panelNuez, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panelNuezGorda, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(panelDisparaGuisantes3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(panelHielaGuisantes, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panelPlantaCarnivora, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panelCactus, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(23, 23, 23)
+                        .addComponent(scrollAreaPlantasElegidas, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(414, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(panelDisparaGuisantes2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelRepetidora, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelDisparaGuisantes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelGirasol, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(panelDisparaGuisantes3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelHielaGuisantes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelPlantaCarnivora, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelCactus, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(panelEstrella, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelPatatamina, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelNuez, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelNuezGorda, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(scrollAreaPlantasElegidas, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(panelMelon, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelMazorca, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelColiflor, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(textoNumeroPlantas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(botonEmpezar)))
+                .addContainerGap(247, Short.MAX_VALUE))
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void textoNumeroPlantasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoNumeroPlantasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textoNumeroPlantasActionPerformed
+
+    private void botonEmpezarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEmpezarActionPerformed
+        if( Integer.parseInt(textoNumeroPlantas.getText()) <= 0 ||
+            Integer.parseInt(textoNumeroPlantas.getText()) > 15 )
+            JOptionPane.showMessageDialog(this, "¡El número ha de estar entre 1 y 15!");
+        else
+        {
+            cantidadPlantas = Integer.parseInt(textoNumeroPlantas.getText());
+            botonEmpezar.setEnabled(false);
+            plantas.clear();
+        }
+
+    }//GEN-LAST:event_botonEmpezarActionPerformed
+
+    private void panelGirasolMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelGirasolMouseClicked
+        boolean plantaYaElegida = false;
+        ListIterator i = plantas.listIterator();
+        while (!plantaYaElegida && i.hasNext())
+        {
+            planta aux = ((planta)i.next());
+            plantaYaElegida = aux.getNombre().equals("Girasol");
+        }
+        if( plantaYaElegida )
+            JOptionPane.showMessageDialog(this, "El Girasol ya está elegido");
+        else
+        {
+            if( cantidadPlantas > 0 && numeroPlantasElegidas < cantidadPlantas )
+            {
+                numeroPlantasElegidas++;
+                JOptionPane.showMessageDialog(this, "Elegido el Girasol");
+                planta girasol = new planta("Girasol", 0, 20, 50);
+                plantas.add(girasol);
+                areaPlantasElegidas.setText(areaPlantasElegidas.getText()
+                        + "\n"
+                        + numeroPlantasElegidas
+                        + ""
+                        + ".- Girasol");
+                repaint();
+            }
+        }
+    }//GEN-LAST:event_panelGirasolMouseClicked
+
+    private void panelDisparaGuisantesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelDisparaGuisantesMouseClicked
+        boolean plantaYaElegida = false;
+        ListIterator i = plantas.listIterator();
+        while (!plantaYaElegida && i.hasNext())
+        {
+            planta aux = ((planta)i.next());
+            plantaYaElegida = aux.getNombre().equals("LanzaGuisantes");
+        }
+        if( plantaYaElegida )
+            JOptionPane.showMessageDialog(this, "El LanzaGuisantes ya está elegido");
+        else
+        {
+            if( cantidadPlantas > 0 && numeroPlantasElegidas < cantidadPlantas )
+            {
+                numeroPlantasElegidas++;
+                JOptionPane.showMessageDialog(this, "Elegido el LanzaGuisantes");
+                planta lanzaGuisantes = new planta("LanzaGuisantes", 30, 20, 100);
+                plantas.add(lanzaGuisantes);
+                areaPlantasElegidas.setText(areaPlantasElegidas.getText()
+                        + "\n"
+                        + numeroPlantasElegidas
+                        + ""
+                        + ".- Lanzaguisantes");
+                repaint();
+            }
+        }
+    }//GEN-LAST:event_panelDisparaGuisantesMouseClicked
+
+    private void panelRepetidoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelRepetidoraMouseClicked
+        boolean plantaYaElegida = false;
+        ListIterator i = plantas.listIterator();
+        while (!plantaYaElegida && i.hasNext())
+        {
+            planta aux = ((planta)i.next());
+            plantaYaElegida = aux.getNombre().equals("Repetidora");
+        }
+        if( plantaYaElegida )
+            JOptionPane.showMessageDialog(this, "La Repetidora ya está elegida");
+        else
+        {
+            if( cantidadPlantas > 0 && numeroPlantasElegidas < cantidadPlantas )
+            {
+                numeroPlantasElegidas++;
+                JOptionPane.showMessageDialog(this, "Elegida la Repetidora");
+                planta repetidora = new planta("Repetidora", 40, 20, 200);
+                plantas.add(repetidora);
+                areaPlantasElegidas.setText(areaPlantasElegidas.getText()
+                        + "\n"
+                        + numeroPlantasElegidas
+                        + ""
+                        + ".- Repetidora");
+                repaint();
+            }
+        }
+    }//GEN-LAST:event_panelRepetidoraMouseClicked
+
+    private void panelDisparaGuisantes2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelDisparaGuisantes2MouseClicked
+        boolean plantaYaElegida = false;
+        ListIterator i = plantas.listIterator();
+        while (!plantaYaElegida && i.hasNext())
+        {
+            planta aux = ((planta)i.next());
+            plantaYaElegida = aux.getNombre().equals("Bipetidora");
+        }
+        if( plantaYaElegida )
+            JOptionPane.showMessageDialog(this, "La Bipetidora ya está elegida");
+        else
+        {
+            if( cantidadPlantas > 0 && numeroPlantasElegidas < cantidadPlantas )
+            {
+                numeroPlantasElegidas++;
+                JOptionPane.showMessageDialog(this, "Elegida la Bipetidora");
+                planta bipetidora = new planta("Bipetidora", 40, 20, 125);
+                plantas.add(bipetidora);
+                areaPlantasElegidas.setText(areaPlantasElegidas.getText()
+                        + "\n"
+                        + numeroPlantasElegidas
+                        + ""
+                        + ".- Bipetidora");
+                repaint();
+            }
+        }
+    }//GEN-LAST:event_panelDisparaGuisantes2MouseClicked
+
+    private void panelDisparaGuisantes3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelDisparaGuisantes3MouseClicked
+        boolean plantaYaElegida = false;
+        ListIterator i = plantas.listIterator();
+        while (!plantaYaElegida && i.hasNext())
+        {
+            planta aux = ((planta)i.next());
+            plantaYaElegida = aux.getNombre().equals("Tripitidora");
+        }
+        if( plantaYaElegida )
+            JOptionPane.showMessageDialog(this, "La Tripitidora ya está elegida");
+        else
+        {
+            if( cantidadPlantas > 0 && numeroPlantasElegidas < cantidadPlantas )
+            {
+                numeroPlantasElegidas++;
+                JOptionPane.showMessageDialog(this, "Elegida la Tripitidora");
+                planta tripitidora = new planta("Tripitidora", 50, 20, 325);
+                plantas.add(tripitidora);
+                areaPlantasElegidas.setText(areaPlantasElegidas.getText()
+                        + "\n"
+                        + numeroPlantasElegidas
+                        + ""
+                        + ".- Tripitidora");
+                repaint();
+            }
+        }
+    }//GEN-LAST:event_panelDisparaGuisantes3MouseClicked
+
+    private void panelHielaGuisantesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelHielaGuisantesMouseClicked
+        boolean plantaYaElegida = false;
+        ListIterator i = plantas.listIterator();
+        while (!plantaYaElegida && i.hasNext())
+        {
+            planta aux = ((planta)i.next());
+            plantaYaElegida = aux.getNombre().equals("HielaGuisantes");
+        }
+        if( plantaYaElegida )
+            JOptionPane.showMessageDialog(this, "La HielaGuisantes ya está elegida");
+        else
+        {
+            if( cantidadPlantas > 0 && numeroPlantasElegidas < cantidadPlantas )
+            {
+                numeroPlantasElegidas++;
+                JOptionPane.showMessageDialog(this, "Elegida la HielaGuisantes");
+                planta hielaGuisantes = new planta("HielaGuisantes", 35, 20, 175);
+                plantas.add(hielaGuisantes);
+                areaPlantasElegidas.setText(areaPlantasElegidas.getText()
+                        + "\n"
+                        + numeroPlantasElegidas
+                        + ""
+                        + ".- HielaGuisantes");
+                repaint();
+            }
+        }
+    }//GEN-LAST:event_panelHielaGuisantesMouseClicked
+
+    private void panelPlantaCarnivoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelPlantaCarnivoraMouseClicked
+        boolean plantaYaElegida = false;
+        ListIterator i = plantas.listIterator();
+        while (!plantaYaElegida && i.hasNext())
+        {
+            planta aux = ((planta)i.next());
+            plantaYaElegida = aux.getNombre().equals("Carronivora");
+        }
+        if( plantaYaElegida )
+            JOptionPane.showMessageDialog(this, "La Planta Carroñívora ya está elegida");
+        else
+        {
+            if( cantidadPlantas > 0 && numeroPlantasElegidas < cantidadPlantas )
+            {
+                numeroPlantasElegidas++;
+                JOptionPane.showMessageDialog(this, "Elegida la Planta Carroñívora");
+                planta carronivora = new planta("Carronivora", 80, 20, 150);
+                plantas.add(carronivora);
+                areaPlantasElegidas.setText(areaPlantasElegidas.getText()
+                        + "\n"
+                        + numeroPlantasElegidas
+                        + ""
+                        + ".- Planta Carroñívora");
+                repaint();
+            }
+        }
+    }//GEN-LAST:event_panelPlantaCarnivoraMouseClicked
+
+    private void panelCactusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelCactusMouseClicked
+        boolean plantaYaElegida = false;
+        ListIterator i = plantas.listIterator();
+        while (!plantaYaElegida && i.hasNext())
+        {
+            planta aux = ((planta)i.next());
+            plantaYaElegida = aux.getNombre().equals("Cactus");
+        }
+        if( plantaYaElegida )
+            JOptionPane.showMessageDialog(this, "El Cactus ya está elegido");
+        else
+        {
+            if( cantidadPlantas > 0 && numeroPlantasElegidas < cantidadPlantas )
+            {
+                numeroPlantasElegidas++;
+                JOptionPane.showMessageDialog(this, "Elegido el Cactus");
+                planta cactus = new planta("Cactus", 30, 20, 125);
+                plantas.add(cactus);
+                areaPlantasElegidas.setText(areaPlantasElegidas.getText()
+                        + "\n"
+                        + numeroPlantasElegidas
+                        + ""
+                        + ".- Cactus");
+                repaint();
+            }
+        }
+    }//GEN-LAST:event_panelCactusMouseClicked
+
+    private void panelPatataminaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelPatataminaMouseClicked
+        boolean plantaYaElegida = false;
+        ListIterator i = plantas.listIterator();
+        while (!plantaYaElegida && i.hasNext())
+        {
+            planta aux = ((planta)i.next());
+            plantaYaElegida = aux.getNombre().equals("PatataMina");
+        }
+        if( plantaYaElegida )
+            JOptionPane.showMessageDialog(this, "La PatataMina ya está elegida");
+        else
+        {
+            if( cantidadPlantas > 0 && numeroPlantasElegidas < cantidadPlantas )
+            {
+                numeroPlantasElegidas++;
+                JOptionPane.showMessageDialog(this, "Elegida la PatataMina");
+                planta patataMina = new planta("PatataMina", 80, 20, 25);
+                plantas.add(patataMina);
+                areaPlantasElegidas.setText(areaPlantasElegidas.getText()
+                        + "\n"
+                        + numeroPlantasElegidas
+                        + ""
+                        + ".- PatataMina");
+                repaint();
+            }
+        }
+    }//GEN-LAST:event_panelPatataminaMouseClicked
+
+    private void panelEstrellaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelEstrellaMouseClicked
+        boolean plantaYaElegida = false;
+        ListIterator i = plantas.listIterator();
+        while (!plantaYaElegida && i.hasNext())
+        {
+            planta aux = ((planta)i.next());
+            plantaYaElegida = aux.getNombre().equals("Frustella");
+        }
+        if( plantaYaElegida )
+            JOptionPane.showMessageDialog(this, "La Frustella ya está elegida");
+        else
+        {
+            if( cantidadPlantas > 0 && numeroPlantasElegidas < cantidadPlantas )
+            {
+                numeroPlantasElegidas++;
+                JOptionPane.showMessageDialog(this, "Elegida la Frustella");
+                planta frustella = new planta("Frustella", 65, 20, 125);
+                plantas.add(frustella);
+                areaPlantasElegidas.setText(areaPlantasElegidas.getText()
+                        + "\n"
+                        + numeroPlantasElegidas
+                        + ""
+                        + ".- Frustella");
+                repaint();
+            }
+        }
+    }//GEN-LAST:event_panelEstrellaMouseClicked
+
+    private void panelNuezMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelNuezMouseClicked
+        boolean plantaYaElegida = false;
+        ListIterator i = plantas.listIterator();
+        while (!plantaYaElegida && i.hasNext())
+        {
+            planta aux = ((planta)i.next());
+            plantaYaElegida = aux.getNombre().equals("Nuez");
+        }
+        if( plantaYaElegida )
+            JOptionPane.showMessageDialog(this, "La Nuez ya está elegida");
+        else
+        {
+            if( cantidadPlantas > 0 && numeroPlantasElegidas < cantidadPlantas )
+            {
+                numeroPlantasElegidas++;
+                JOptionPane.showMessageDialog(this, "Elegida la Nuez");
+                planta nuez = new planta("Nuez", 0, 60, 50);
+                plantas.add(nuez);
+                areaPlantasElegidas.setText(areaPlantasElegidas.getText()
+                        + "\n"
+                        + numeroPlantasElegidas
+                        + ""
+                        + ".- Nuez");
+                repaint();
+            }
+        }
+    }//GEN-LAST:event_panelNuezMouseClicked
+
+    private void panelNuezGordaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelNuezGordaMouseClicked
+        boolean plantaYaElegida = false;
+        ListIterator i = plantas.listIterator();
+        while (!plantaYaElegida && i.hasNext())
+        {
+            planta aux = ((planta)i.next());
+            plantaYaElegida = aux.getNombre().equals("NuezGorda");
+        }
+        if( plantaYaElegida )
+            JOptionPane.showMessageDialog(this, "La Nuez Cáscara-Rabias ya está elegida");
+        else
+        {
+            if( cantidadPlantas > 0 && numeroPlantasElegidas < cantidadPlantas )
+            {
+                numeroPlantasElegidas++;
+                JOptionPane.showMessageDialog(this, "Elegida la Nuez Cáscara Rabias");
+                planta nuezGorda = new planta("NuezGorda", 0, 100, 125);
+                plantas.add(nuezGorda);
+                areaPlantasElegidas.setText(areaPlantasElegidas.getText()
+                        + "\n"
+                        + numeroPlantasElegidas
+                        + ""
+                        + ".- Nuez Cáscara Rabias");
+                repaint();
+            }
+        }
+    }//GEN-LAST:event_panelNuezGordaMouseClicked
+
+    private void panelColiflorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelColiflorMouseClicked
+        boolean plantaYaElegida = false;
+        ListIterator i = plantas.listIterator();
+        while (!plantaYaElegida && i.hasNext())
+        {
+            planta aux = ((planta)i.next());
+            plantaYaElegida = aux.getNombre().equals("Coltapulta");
+        }
+        if( plantaYaElegida )
+            JOptionPane.showMessageDialog(this, "La Coltapulta ya está elegida");
+        else
+        {
+            if( cantidadPlantas > 0 && numeroPlantasElegidas < cantidadPlantas )
+            {
+                numeroPlantasElegidas++;
+                JOptionPane.showMessageDialog(this, "Elegida la Coltapulta");
+                planta coltapulta = new planta("Coltapulta", 30, 20, 100);
+                plantas.add(coltapulta);
+                areaPlantasElegidas.setText(areaPlantasElegidas.getText()
+                        + "\n"
+                        + numeroPlantasElegidas
+                        + ""
+                        + ".- Coltapulta");
+                repaint();
+            }
+        }
+    }//GEN-LAST:event_panelColiflorMouseClicked
+
+    private void panelMazorcaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelMazorcaMouseClicked
+        boolean plantaYaElegida = false;
+        ListIterator i = plantas.listIterator();
+        while (!plantaYaElegida && i.hasNext())
+        {
+            planta aux = ((planta)i.next());
+            plantaYaElegida = aux.getNombre().equals("Lanzamaiz");
+        }
+        if( plantaYaElegida )
+            JOptionPane.showMessageDialog(this, "El Lanzamaiz ya está elegido");
+        else
+        {
+            if( cantidadPlantas > 0 && numeroPlantasElegidas < cantidadPlantas )
+            {
+                numeroPlantasElegidas++;
+                JOptionPane.showMessageDialog(this, "Elegido el Lanzamaiz");
+                planta lanzamaiz = new planta("Lanzamaiz", 35, 20, 100);
+                plantas.add(lanzamaiz);
+                areaPlantasElegidas.setText(areaPlantasElegidas.getText()
+                        + "\n"
+                        + numeroPlantasElegidas
+                        + ""
+                        + ".- Lanzamaiz");
+                repaint();
+            }
+        }
+    }//GEN-LAST:event_panelMazorcaMouseClicked
+
+    private void panelMelonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelMelonMouseClicked
+        boolean plantaYaElegida = false;
+        ListIterator i = plantas.listIterator();
+        while (!plantaYaElegida && i.hasNext())
+        {
+            planta aux = ((planta)i.next());
+            plantaYaElegida = aux.getNombre().equals("Melonpulta");
+        }
+        if( plantaYaElegida )
+            JOptionPane.showMessageDialog(this, "La Melonpulta ya está elegida");
+        else
+        {
+            if( cantidadPlantas > 0 && numeroPlantasElegidas < cantidadPlantas )
+            {
+                numeroPlantasElegidas++;
+                JOptionPane.showMessageDialog(this, "Elegida la Melonpulta");
+                planta melonpulta = new planta("Melonpulta", 55, 20, 300);
+                plantas.add(melonpulta);
+                areaPlantasElegidas.setText(areaPlantasElegidas.getText()
+                        + "\n"
+                        + numeroPlantasElegidas
+                        + ""
+                        + ".- Melonpulta");
+                repaint();
+            }
+        }
+    }//GEN-LAST:event_panelMelonMouseClicked
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        
+    }//GEN-LAST:event_formWindowClosed
+
+    /**
+    * @param args the command line arguments
+    */
+    public static void main(String args[]) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new elegirPlantitas().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea areaPlantasElegidas;
+    private javax.swing.JButton botonEmpezar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel panelCactus;
+    private javax.swing.JPanel panelColiflor;
+    private javax.swing.JPanel panelDisparaGuisantes;
+    private javax.swing.JPanel panelDisparaGuisantes2;
+    private javax.swing.JPanel panelDisparaGuisantes3;
+    private javax.swing.JPanel panelEstrella;
+    private javax.swing.JPanel panelGirasol;
+    private javax.swing.JPanel panelHielaGuisantes;
+    private javax.swing.JPanel panelMazorca;
+    private javax.swing.JPanel panelMelon;
+    private javax.swing.JPanel panelNuez;
+    private javax.swing.JPanel panelNuezGorda;
+    private javax.swing.JPanel panelPatatamina;
+    private javax.swing.JPanel panelPlantaCarnivora;
+    private javax.swing.JPanel panelRepetidora;
+    private javax.swing.JScrollPane scrollAreaPlantasElegidas;
+    private javax.swing.JTextField textoNumeroPlantas;
+    // End of variables declaration//GEN-END:variables
+
+}
